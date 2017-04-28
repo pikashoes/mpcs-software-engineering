@@ -1,27 +1,25 @@
-# Homework #2
+HOW TO RUN:
+-----------
+In the terminal, write "python ticketing.py" to launch the command prompt. You may use the help functions built into the application to navigate, make reservations, add customers, etc.
 
-**25 pts**
+WHAT IS IN THE DIRECTORY:
+-------------------------
+- customers.csv, flights.csv, reservations.csv, schedule.csv:
+	> All the background "databases" that contain information to allow the agents to see their changes when they log in again.
+- ticketingtest.py
+	> The test file
+- ticketing.py
+	> The main python file
 
-**Due: Thursday, Feb 9 5:29pm**
+NOTES:
+------
+1. When developing this using TDD, initially I began by writing the unit tests as we had done in class. However, I ran into my first roadblock: how to test when things aren't being returned, but printed.
+2. So while I initially began by writing functions that returned things (not void), I found that it was difficult to continue this testing method because I couldn't test it on the interface.
+3. I saw on a Piazza post that how and what we choose to test is a decision we make, so I decided to test via the terminal on single functions.
+4. I began with customer adding/look up and also the csv file that would allow for it to be saved.
+5. Because I knew that the reservations and flights would be similar in terms of the csv file, I added that.
+6. Then I tested the reservations adding and look up system.
+7. I then did the flights, which I implemented within the reservations adding system.
+8. My final test was for credit card validation(which I included in the unit test file because it actually returns True or False).
 
-### Instructions
-
-This assignment is designed to give you some practice at Test-Driven Development.
-
-* Do not fork this repository.  Download this code using the green "Clone or Download" button on GitHub, then select "Download ZIP"; or, clone this repository and remove the git data (`rm -rf .git`).
-
-* **IMPORTANT: Commit often!  I need to see the evolution of your design.**  Specifically, *commit your code every time you write a new failing test*.  It would also be great to commit every time the tests pass again, but I understand that might be a lot to keep track of.  (Do not worry if you forget to commit once or twice - I just want to make sure you're generally following TDD).
-
-* Start by running the `ticketing.py` program like we did in class.  
-
-### Requirements:
-
-1. Read the attached REQUIREMENTS doc.
-
-2. Implement as many of the ``Actions`` as you can, using TDD to drive the design of your solutions.
-
-3. You have freedom with regard to the actual functionality.  I intentionally left the requirements a bit vague so you can have fun with it.  Don't feel you have to get very fancy, but I would like to see some creativity and effort.
-Consider this project to be a real project and you've been hired to build
-the first prototype for our airline.
-
-Questions?  Hit me up on Piazza.  Happy coding!
+Overall, I implemented all the features and they worked for me. I finished it up by adding in more helpful descriptions for each function and error handling.
